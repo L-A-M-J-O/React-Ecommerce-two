@@ -5,6 +5,7 @@ export default function CartWidget() {
   return (
     <button className='btn-cart'>
       <img className='img-cart' src={CartWidgetImg} alt='CartWidget'/>
+      <p className='cantidad'>0</p>
     </button>
-  )
+  ) 
 }

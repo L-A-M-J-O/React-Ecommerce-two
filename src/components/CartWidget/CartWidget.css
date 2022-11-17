@@ -1,9 +1,15 @@
 .btn-cart {
-    width: 35px;
+    display: flex;
+    width: 56px;
     height: 35px;
     background-color: #FFFF;
-    border-radius: 50%;
+    border-radius: 40%;
 }
 .btn-cart .img-cart {
     padding: 10px;
+}
+.cantidad {
+    font-size: 22px;
+    padding-top: 1px;
+    color: #1C6758;
 }
