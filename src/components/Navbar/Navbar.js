@@ -5,14 +5,14 @@ export const Navbar = () => {
     return (
       <>
       <div className='row align-items-center'>
-        <div className='col-12 col-sm-12 col-md-5 col-lg-4 text-center p-2'>
+        <div className='col-12 col-sm-12 col-md-5 col-lg-3 text-center p-2'>
           <button className='img-btn-box'>
             <div className='img-icon-box'>
               <img className='img-icon' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/1200px-Rick_and_Morty.svg.png" alt="icon"/>
             </div>
           </button>
         </div>
-        <div className='col-12 col-sm-12 col-md-5 col-lg-6'>
+        <div className='col-12 col-sm-12 col-md-5 col-lg-7'>
           <nav className="flex sm:justify-end space-x-4 items-center ">
           {[
             ['Home', '/dashboard'],
