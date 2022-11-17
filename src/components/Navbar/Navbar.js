@@ -1,15 +1,31 @@
-export const Navbar = () => {
+import '../Navbar/Navbar.css'
+import CartWidget from "../CartWidget/CartWidget";
 
+export const Navbar = () => {
     return (
-        <nav className="flex sm:justify-center space-x-4">
-        {[
-          ['Home', '/dashboard'],
-          ['Serie', '/team'],
-          ['Trailers', '/projects'],
-          ['Personajes', '/reports'],
-        ].map(([title, url]) => (
-          <a href={url} className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
-        ))}
-      </nav>
+      <>
+      <div className='row align-items-center'>
+        <div className='col-12 col-sm-12 col-md-5 col-lg-4 text-center'>
+          <button className='img-btn-box'>
+            <div className='img-icon-box'>
+              <img className='img-icon' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/1200px-Rick_and_Morty.svg.png" alt="icon"/>
+            </div>
+          </button>
+        </div>
+        <div className='col-12 col-sm-12 col-md-5 col-lg-6'>
+          <nav className="flex sm:justify-end space-x-4 items-center ">
+          {[
+            ['Home', '/dashboard'],
+            ['Serie', '/team'],
+            ['Trailers', '/projects'],
+            ['Personajes', '/reports'],
+          ].map(([title, url]) => (
+            <a href={url} className="rounded-lg px-4 font-medium hover:bg-slate-100">{title}</a>
+          ))}
+          <CartWidget/>
+          </nav>
+        </div>
+      </div>
+      </>
     )
 }
