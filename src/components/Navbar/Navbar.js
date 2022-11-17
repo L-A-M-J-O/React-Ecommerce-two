@@ -5,7 +5,7 @@ export const Navbar = () => {
     return (
       <>
       <div className='row align-items-center'>
-        <div className='col-12 col-sm-12 col-md-5 col-lg-4 text-center'>
+        <div className='col-12 col-sm-12 col-md-5 col-lg-4 text-center p-2'>
           <button className='img-btn-box'>
             <div className='img-icon-box'>
               <img className='img-icon' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/1200px-Rick_and_Morty.svg.png" alt="icon"/>
@@ -19,8 +19,8 @@ export const Navbar = () => {
             ['Serie', '/team'],
             ['Trailers', '/projects'],
             ['Personajes', '/reports'],
-          ].map(([title, url]) => (
-            <a href={url} className="rounded-lg px-4 font-medium hover:bg-slate-100">{title}</a>
+          ].map(([title, url], index) => (
+            <a key={index} href={url} className="rounded-lg px-4 font-medium hover:bg-slate-100">{title}</a>
           ))}
           <CartWidget/>
           </nav>

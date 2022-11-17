@@ -1,0 +1,9 @@
+.btn-cart {
+    width: 35px;
+    height: 35px;
+    background-color: #FFFF;
+    border-radius: 50%;
+}
+.btn-cart .img-cart {
+    padding: 10px;
+}
