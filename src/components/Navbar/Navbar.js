@@ -15,8 +15,9 @@ export const Navbar = () => {
         <div className='col-12 col-sm-12 col-md-5 col-lg-7'>
           <nav className="flex sm:justify-end space-x-4 items-center ">
           {[
-            ['Home', '/dashboard'],
-            ['Serie', '/team'],
+            ['Home', '/'],
+            ['Personajes', '/personajes'],
+            ['Serie', '/series'],
             ['Trailers', '/projects'],
             ['Personajes', '/reports'],
           ].map(([title, url], index) => (
