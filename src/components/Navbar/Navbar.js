@@ -19,7 +19,6 @@ export const Navbar = () => {
             ['Personajes', '/personajes'],
             ['Serie', '/series'],
             ['Trailers', '/projects'],
-            ['Personajes', '/reports'],
           ].map(([title, url], index) => (
             <a key={index} href={url} className="rounded-lg px-4 font-medium hover:bg-slate-100">{title}</a>
           ))}
