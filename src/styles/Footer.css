@@ -1,0 +1,9 @@
+.ptg{
+    padding: 5px;
+}
+.ptg::after {
+    color: #ffffff;
+    content: '|';
+    display: inline-block;
+    margin: 0 0 0 5px;
+}

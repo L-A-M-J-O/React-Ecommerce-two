@@ -3,6 +3,7 @@ import './App.css';
 import { Navbar } from "./components/Navbar/Navbar";
 import { Routes, Route} from 'react-router-dom'
 import { Home } from './pages/Home';
+import { Footer } from './pages/Footer';
 import { Series } from './components/Series/Series';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
@@ -19,6 +20,7 @@ function App() {
 					</Route>
           <Route path="/detail/:personajesid" element={<ItemDetailContainer />} />
         </Routes>
+      <Footer/>
     </div>
 
   );
