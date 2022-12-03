@@ -7,7 +7,7 @@ export const Item = ({id, name, species, gender, image}) => {
         <h2>{name}</h2>
         <Link to={`/detail/${id}${name}`}>
             <button className="btn bg-indigo-200 border-black">
-                detalle
+                Detalle
             </button>
         </Link>
     </div>
