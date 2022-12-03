@@ -13,7 +13,7 @@ export const Navbar = () => {
           </button>
         </div>
         <div className='col-12 col-sm-12 col-md-5 col-lg-7'>
-          <nav className="flex sm:justify-end space-x-4 items-center ">
+          <nav className="flex sm:justify-start space-x-4 items-center ">
           {[
             ['Home', '/'],
             ['Personajes', '/personajes'],

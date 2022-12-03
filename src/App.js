@@ -4,8 +4,8 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Routes, Route} from 'react-router-dom'
 import { Home } from './pages/Home';
 import { Series } from './components/Series/Series';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
