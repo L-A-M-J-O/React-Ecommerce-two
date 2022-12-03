@@ -6,9 +6,9 @@ export const ItemListContainer = () => {
   const [character, setCharacter] = useState(personajes);
  
   return (
-    <>
+    <div className='container'>
         <ItemList data={character}/>
-    </>
+    </div>
   )
 }
 
