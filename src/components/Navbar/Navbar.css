@@ -1,4 +1,10 @@
-.img-btn-box{
-    padding: 20px;
-    width: 250px;
+nav {
+    height: 40px;
+    background-color: #fff;
+}
+nav a {
+    background-color: #fff;
+}
+nav a:hover {
+    color: rosybrown;
 }
