@@ -5,7 +5,7 @@ export const Item = ({id, name, species, gender, image}) => {
   return (
     <div className='col'>
         <h2>{name}</h2>
-        <Link to={`/detail/10`}>
+        <Link to={`/detail/${id}${name}`}>
             <button className="btn bg-indigo-200 border-black">
                 detalle
             </button>

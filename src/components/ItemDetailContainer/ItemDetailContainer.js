@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams } from "react-router"
 
 export const ItemDetailContainer = () => {
-    const {personajesid} = useParams;
+    const {personajesid} = useParams ();
   return (
     <div>
-        Detalle de personaje
-        <h1>{personajesid}</h1>
+        {personajesid}
     </div>
   )
 }
