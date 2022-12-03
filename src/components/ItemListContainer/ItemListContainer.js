@@ -1,9 +1,13 @@
-import React from 'react'
+import {useState} from 'react'
+import personajes from '../../data';
+import { ItemList } from '../ItemList/ItemList';
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
+  const [character, setCharacter] = useState(personajes);
+ 
   return (
     <>
-      <h1>{ props.data}</h1>
+        <ItemList data={character}/>
     </>
   )
 }

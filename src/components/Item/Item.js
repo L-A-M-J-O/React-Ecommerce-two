@@ -1,14 +1,16 @@
 import React from 'react'
-import personajes from '../../data';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import { Link } from 'react-router-dom';
 
-export const Item = () => {
-    return <>
-    {
-        personajes.map((element) => {
-            return <ItemListContainer data={element}/>
-        })
-    }
-
-    </>
+export const Item = ({id, name, species, gender, image}) => {
+  return (
+    <div className='col'>
+        <h2>{name}</h2>
+        <Link to={`/detail/10`}>
+            <button className="btn bg-indigo-200 border-black">
+                detalle
+            </button>
+        </Link>
+    </div>
+  )
 }
+

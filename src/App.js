@@ -17,7 +17,7 @@ function App() {
           <Route path="/personajes" element={<ItemListContainer />}>
 							<Route path=":especie" element={<ItemListContainer />} />
 					</Route>
-          <Route path="Detail/:prodId" element={<ItemDetailContainer />} />
+          <Route path="/detail/:personajesid" element={<ItemDetailContainer />} />
         </Routes>
     </div>
 
