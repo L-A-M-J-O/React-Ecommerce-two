@@ -8,9 +8,11 @@ import { Series } from './components/Series/Series';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
+import { CartContextProvider} from './context/context';
+
 function App() {
   return (
-    <div className="App">
+    <CartContextProvider>
       <Navbar/> 
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -21,7 +23,7 @@ function App() {
           <Route path="/detail/:personajesid" element={<ItemDetailContainer />} />
         </Routes>
       <Footer/>
-    </div>
+    </CartContextProvider>
 
   );
 }
