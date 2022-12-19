@@ -1,11 +1,14 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
 
-export const ItemDetail = ({data}) => {
-  console.log(data);
+const ItemDetail = ({name, image}) => {
+  console.log(name)
   return (
     <>
-          Detalles
+      <div>
+        <h1>{name}</h1>
+        <img src={image} alt='the Character'/>
+      </div>
     </>
   )
 }
+
+export default ItemDetail

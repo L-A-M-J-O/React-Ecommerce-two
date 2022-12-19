@@ -1,12 +1,12 @@
-import React from 'react'
-import { Item } from '../Item/Item'
+import Item from '../Item/Item'
 
-export const ItemList = ({data}) => {
+const ItemList = ({character}) => {
+  console.log(character)
   return (
-    <div className='row justify-center'> 
-        {
-            data.map((element,index) => <Item key={index} {...element}/>)
-        }
-    </div>
+    <>
+        {character.map((element) => <Item key={element.id} {...element}/>)}
+    </>
   )
 }
+
+export default ItemList
