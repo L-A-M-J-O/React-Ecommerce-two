@@ -9,6 +9,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
 import { CartContextProvider} from './context/context';
+import { CartChracter } from './components/CartCharacter/CartChracter';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 							<Route path=":especie" element={<ItemListContainer />} />
 					</Route>
           <Route path="/detail/:personajesid" element={<ItemDetailContainer />} />
+          <Route path="/characters" element={<CartChracter />} />
         </Routes>
       <Footer/>
     </CartContextProvider>

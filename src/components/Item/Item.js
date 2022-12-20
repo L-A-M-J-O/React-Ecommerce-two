@@ -11,6 +11,9 @@ const Item = ({id, name, image}) => {
           <div class="emptybar"></div>
           <div class="filledbar"></div>
         </div> */}
+        <Link to={`/detail/${id}`}>
+          ENTrAR
+        </Link>
       </div>
     </>
   )

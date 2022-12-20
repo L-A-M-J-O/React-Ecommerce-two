@@ -39,7 +39,7 @@ export const ItemListContainer = ({tittle}) => {
   return (
     <>
     <span>{tittle}</span>
-      <div className='container'>
+      <div className='container banner-card'>
           <ItemList character={character}/>
       </div>
     </>

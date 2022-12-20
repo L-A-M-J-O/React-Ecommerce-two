@@ -14,7 +14,7 @@ export const ItemDetailContainer = () => {
 
   useEffect ( ( ) => {
     getDoc(doc(db, 'character', personajesid)).then(response =>{
-        const data = response.data
+        const data = response.data()
         const productsAdapted = {id: response.id, ...data}
         setCharacter(productsAdapted)
     }).catch(error => {
@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
       return <span>Loading...</span>
   }
   return (
-    <div className="container text-center text-white">
+    <div className="container text-center text-white banner-card">
         <h2 className='h2-detail'>
           <ItemDetail {...character}/>
         </h2>

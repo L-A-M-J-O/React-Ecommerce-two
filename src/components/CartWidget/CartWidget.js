@@ -10,7 +10,7 @@ export default function CartWidget() {
   return (
     <>
       <button className='btn-cart text-xs text-black'>
-        <Link to='/personajes'>Carrito
+        <Link to='/characters'>Carrito
           <span className='text-white'>{quantity}</span>
         </Link>
       </button>

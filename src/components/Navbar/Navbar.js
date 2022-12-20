@@ -12,7 +12,7 @@ export const Navbar = () => {
                 ['Home', '/'],
                 ['Personajes', '/personajes'],
                 ['Serie', '/series'],
-                ['Trailers', '/projects'],
+                ['Trailers', '/projects']
               ].map(([title, url], index) => (  
                 <a key={index} href={url} className=" text-xs text-black">{title}</a>
               ))}
