@@ -24,5 +24,11 @@ h1 {
     background-color: white;
 }
 .box-banner-home-image{
-    background-image: url(../assets/img/);
+    margin-top: 2rem;
+    background-image: url(../assets/img/642551.png);
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    border-bottom-right-radius: 4rem;
 }

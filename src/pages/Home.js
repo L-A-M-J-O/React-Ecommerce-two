@@ -27,8 +27,7 @@ export const Home = () => {
           <img width={90}  src='https://media.cdn.adultswim.com/uploads/20210212/212121411576-android.png' alt='logotipo'/>
         </div>
       </div>
-      <div className='row box-banner-home-image'>
-
+      <div className='row box-banner-home-image p-0 mb-5 mt-0 ms-0 me-0'>
       </div>
     </>
   )
