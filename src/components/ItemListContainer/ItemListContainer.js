@@ -2,6 +2,7 @@ import '../ItemListContainer/ItemListContainer.css';
 import React,{useState, useEffect} from 'react'
 
 import ItemList from '../ItemList/ItemList';
+import Curiosidad from '../../pages/Curiosidad';
 
 import { useParams } from 'react-router';
 
@@ -28,13 +29,26 @@ export const ItemListContainer = ({tittle}) => {
     }).catch (error => {
         console.log (error)
     }).finally ( ( )=> {
-        setLoading(false)
+      setTimeout(() => {
+        setLoading(false);
+      }, 0)
+        
     })
-
 }, [status])
-
   if(loading){
-      return <span>Loading...</span>
+      return(
+        
+      <section className='container box-loading' >
+        <div className='row justify-center mt-5'>
+          <div className='col-4'>
+            <h1 className='loading'>Loading...</h1>
+          </div>
+          <div className='col-12'>
+              <Curiosidad/>
+            </div>
+        </div>
+      </section> 
+      )
   }
   return (
     <>

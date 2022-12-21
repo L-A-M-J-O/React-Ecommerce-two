@@ -4,3 +4,15 @@
 .banner-card{
   height: 75vh;
 }
+.loading{
+  padding: 10px;
+  margin: 6px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 1rem;
+  color: white;
+}
+.loading{
+  height: 10vh;
+}
