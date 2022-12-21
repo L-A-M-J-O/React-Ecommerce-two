@@ -9,29 +9,29 @@ export const Footer = () => {
   return (
     <>
         <footer className='text-xs text-white'>
-            <div className='row justify-content-center p-0 m-0'>
+            <div className='row justify-content-center p-0 m-5'>
                 <div className='col-12 text-center'>
                     <small>&copy; 2022 <b>Alan Mateo Naranjo Alvarado</b></small>
                     <br/>
                     <div className='row justify-center'>
                     <div className='col-auto p-1'>
-                        <a href='https://github.com/L-A-M-J-O'>
+                        <a className='href-footer' href='https://github.com/L-A-M-J-O'>
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </div>
                     <div className='col-auto p-1'>
-                        <a href='https://www.linkedin.com/in/alann3009200330092003/'>
+                        <a className='href-footer' href='https://www.linkedin.com/in/alann3009200330092003/'>
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
                     </div>
                     <div className='col-auto p-1'>
-                        <a href='https://portfolio-alan-naranjo.vercel.app/'>
+                        <a className='href-footer' href='https://portfolio-alan-naranjo.vercel.app/'>
                             <FontAwesomeIcon icon={faPaperclip} />
                         </a>
                     </div>
                     </div>
                     <br/>
-                    <a href='https://www.adultswim.com/'><i>Adult Swim Pagina Original</i></a>
+                    <a className='href-footer' href='https://www.adultswim.com/'><i>Adult Swim Pagina Original</i></a>
         
                 </div>
                 <div className='col-12 m-2 text-center'>

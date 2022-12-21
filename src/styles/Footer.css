@@ -1,5 +1,14 @@
+.href-footer{
+    font-size: 1rem;
+}
+.href-footer:hover {
+    color: #B2A4FF;
+}
 .ptg{
     padding: 5px;
+}
+.ptg:hover{
+    color: #B2A4FF;
 }
 .ptg::after {
     color: #ffffff;

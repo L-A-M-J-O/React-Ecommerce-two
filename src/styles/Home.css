@@ -25,9 +25,9 @@ h1 {
 }
 .box-banner-home-image{
     margin-top: 2rem;
-    background-image: url(../assets/img/banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url(../assets/img/banner.png);
     background-position: center;    
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: cover;
     height: 100vh;
     border-bottom-right-radius: 4rem;
