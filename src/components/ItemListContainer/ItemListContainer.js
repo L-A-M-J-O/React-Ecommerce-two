@@ -15,10 +15,10 @@ export const ItemListContainer = ({tittle}) => {
   const [character, setCharacter] = useState([]);
   const[loading, setLoading] = useState(true);
 
-  const {status} = useParams();
+  const {specie} = useParams();
   useEffect(() =>{
 
-    const collectionRef = status ? query(collection(db, 'character'), where('status','==', status)):  collection(db, 'character')
+    const collectionRef = specie ? query(collection(db, 'character'), where('specie','==', specie) ):  collection(db, 'character')
 
     getDocs(collectionRef).then (response => {
         const productsAdapted = response.docs.map (element => {
@@ -34,7 +34,7 @@ export const ItemListContainer = ({tittle}) => {
       }, 0)
         
     })
-}, [status])
+}, [specie])
   if(loading){
       return(
         
