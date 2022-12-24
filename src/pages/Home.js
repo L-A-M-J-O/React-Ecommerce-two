@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Home.css';
+import { Footer } from './Footer';
 
 export const Home = () => {
   return (
@@ -29,6 +30,7 @@ export const Home = () => {
       </div>
       <div className='row box-banner-home-image p-0 mb-5 mt-0 ms-0 me-0'>
       </div>
+      <Footer/>
     </>
   )
 }

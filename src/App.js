@@ -22,7 +22,6 @@ function App() {
           <Route path="/detail/:personajesid" element={<ItemDetailContainer />} />
           <Route path="/characters" element={<CartChracter />} />
         </Routes>
-      <Footer/>
     </CartContextProvider>
 
   );
