@@ -1,14 +1,21 @@
+import { useState } from 'react';
 import '../../components/Item/Item.css';
 import { Link } from 'react-router-dom';
 
 const Item = ({id, name, image, specie, origin, status}) => {
 
-    const active = 0;
-    const desactive = 0;
+    const [active, setActive] = useState('Alive');
+    const [desactive, setDesactive] = useState('Dead');
+    const [nose, setNose] = useState('No evidence')
 
     if(status >= 1){
-
+        status = active;
     }
+    else if(status <= 0){
+        status = desactive
+    }
+    else { status = nose}
+
 
   return (
     <div className="col-lg-4">
@@ -28,12 +35,12 @@ const Item = ({id, name, image, specie, origin, status}) => {
                         </div>
                     </div>
                     <ol className="widget-49-meeting-points bg-white">
-                    <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Expand module is removed</span></li>
-                        <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Data migration is in scope</span></li>
-                        <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Session timeout increase to 30 minutes</span></li>
+                        <li className="widget-49-meeting-item bg-white"><span className='span-status bg-white text-black capitalize'>{status}</span></li>
+                        {/* <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Data migration is in scope</span></li>
+                        <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Session timeout increase to 30 minutes</span></li> */}
                     </ol>
                     <div className="widget-49-meeting-action bg-white">
-                        <Link href="#" className="btn btn-sm btn-flash-border-primary">View All</Link>
+                        <Link to={`/detail/${id}`} className="btn btn-sm btn-flash-border-primary border">Get in</Link>
                     </div>
                 </div>
             </div>
