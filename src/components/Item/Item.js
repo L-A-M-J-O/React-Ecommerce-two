@@ -36,8 +36,6 @@ const Item = ({id, name, image, specie, origin, status}) => {
                     </div>
                     <ol className="widget-49-meeting-points bg-white">
                         <li className="widget-49-meeting-item bg-white"><span className='span-status bg-white text-black capitalize'>{status}</span></li>
-                        {/* <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Data migration is in scope</span></li>
-                        <li className="widget-49-meeting-item bg-white"><span className='bg-white text-black'>Session timeout increase to 30 minutes</span></li> */}
                     </ol>
                     <div className="widget-49-meeting-action bg-white">
                         <Link to={`/detail/${id}`} className="btn btn-sm btn-flash-border-primary border">Get in</Link>

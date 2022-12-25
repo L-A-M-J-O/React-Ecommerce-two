@@ -1,4 +1,5 @@
 import React,{useState, useContext, useEffect} from 'react';
+import '../ItemDetailContainer/ItemDetailContainer.css';
 import ItemCount from '../ItemCount/ItemCount';
 import CartContext from '../../context/context';
 import { setLogLevel } from 'firebase/app';
@@ -20,17 +21,29 @@ const ItemDetail = ({name, image, id, origin, specie, status, genere, episode}) 
 			addItem(productToAdd);
 		}
 	};
-	useEffect(() => {
-		setEpisodeData(episodeData);
-	},[episodeData])
+		useEffect(() => {
+			setEpisodeData(episodeData);
+		},[episodeData])
+
   return (
     <>
-      <div>
-        <h1>{name}</h1>
-        <img src={image} alt='the Character'/>
-				<p>{origin},{specie},{status}, {genere}</p>
-				<h2>{episodeData.date}, {episodeData.code}, {episodeData.name}</h2>
-      </div>
+		<h1>{name}</h1>
+		<div className="min-h-screen w-full">
+			<div className="max-w-screen-md mx-auto px-10 pt-20">
+				<div className="md:h-48 rounded-lg shadow-md flex flex-wrap flex-col-reverse md:flex-col">
+					<div className="w-full md:w-1/2 p-4">
+						<h3 className="text-3xl font-bold">{specie}</h3>
+						<p className=''>{origin}</p>
+						<p className=''>{genere}</p>
+						<p className='text-5xl mt-2'>{status}</p>
+						
+					</div>
+					<div className="w-full md:w-1/2 p-4 md:p-0">
+						<img src={image} alt="" className="w-100 mx-auto"/>
+					</div>
+				</div>
+			</div>
+		</div>
     </>
   )
 }
