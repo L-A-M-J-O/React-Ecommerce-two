@@ -6,47 +6,30 @@ import '../CartCharacter/CartCharacter.css';
 
 export const CartChracter = () => {
 
-  const { cart, clearCart, removeItem, total } = useContext(CartContext);
+  const { cart, clearCart, removeItem,} = useContext(CartContext);
 
   return (
 		<>
 			{cart.length === 0 ? (
 				<>
-					<h1 className="text-center mt-4">Your cart is empty</h1>
+					<h1 className="text-center mt-4 text-white">Your cart is empty</h1>
 					<div className="row justify-content-center mt-3">
 						<div className="col-12 col-sm-12 col-md-5 col-lg-5 text-center">
-							<Link to="/cervezas" className="m-txt-a" aria-current="page">
-								<button className="btnB mt-4">CERVEZAS</button>
+							<Link to="/personajes" className="m-txt-a" aria-current="page">
+								<button className="btnB mt-4">Characters</button>
 							</Link>
 						</div>
 					</div>
 				</>
 			) : (
 				<>
-					<h1 className="text-center mt-4">Your purchase</h1>
-					<div className="cart mt-4">
-							<thead>
-								<tr>
-									<th />
-									<th>Products</th>
-									<th>Price</th>
-									<th>Quantity</th>
-									<th>Total</th>
-								</tr>
-							</thead>
-							<tbody>
-								{cart.map((guia) => {
+				<h1 className="text-center mt-4 text-white">Your purchase</h1>
+				<table class="table text-white">
+				<tbody className='text-white'>
+				{cart.map((guia) => {
 									return (
 										<tr key={guia.id}>
 											<td>
-												<img
-													width={28}
-													src=''
-													alt="borrar"
-													onClick={() => removeItem(guia.id)}
-													id={guia.id}
-												/>
-											</td>
 											<td>
 												<Link
 													className="n-a linkProduct "
@@ -55,18 +38,24 @@ export const CartChracter = () => {
 													{guia.name}
 												</Link>
 											</td>
-											<td>${guia.price}</td>
+												<img
+													width={28}
+													src=''
+													alt="borrar"
+													onClick={() => removeItem(guia.id)}
+													id={guia.id}
+												/>
+											</td>
+											<td>${guia.status}</td>
 											<td>{guia.quantity}</td>
 											<td>${guia.total}</td>
+
 										</tr>
+										
 									);
 								})}
-								<tr>
-									<td colSpan={4}>Total</td>
-									<td>${total}</td>
-								</tr>
-							</tbody>
-						{cart.length !== 0 && (
+				</tbody>
+				{cart.length !== 0 && (
 							<div className="row justify-content-center">
 								<div className="col-2">
 									<button className="btnI" onClick={clearCart}>
@@ -85,7 +74,7 @@ export const CartChracter = () => {
 								</div>
 							</div>
 						)}
-					</div>
+			</table>
 				</>
 			)}
 		</>
