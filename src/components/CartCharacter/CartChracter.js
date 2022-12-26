@@ -7,7 +7,6 @@ import '../CartCharacter/CartCharacter.css';
 export const CartChracter = () => {
 
   const { cart, clearCart, removeItem,} = useContext(CartContext);
-
   return (
 		<>
 			{cart.length === 0 ? (
@@ -24,32 +23,32 @@ export const CartChracter = () => {
 			) : (
 				<>
 				<h1 className="text-center mt-4 text-white">Your purchase</h1>
-				<table class="table text-white">
+				<table class="table text-white mt-5 table-box">
 				<tbody className='text-white'>
-				{cart.map((guia) => {
+				{cart.map((element) => {
+					console.log(element);
 									return (
-										<tr key={guia.id}>
+										<tr key={element.id}>
 											<td>
 											<td>
 												<Link
 													className="n-a linkProduct "
-													to={`../Detail/${guia.id}`}
+													to={`../Detail/${element.id}`}
 												>
-													{guia.name}
+													{element.name}
 												</Link>
 											</td>
-												<img
+											</td>
+											<td>${element.status}</td>
+											<td>{element.quantity}</td>
+											<td>${element.total}</td>
+											<td><img
 													width={28}
 													src=''
 													alt="borrar"
-													onClick={() => removeItem(guia.id)}
-													id={guia.id}
-												/>
-											</td>
-											<td>${guia.status}</td>
-											<td>{guia.quantity}</td>
-											<td>${guia.total}</td>
-
+													onClick={() => removeItem(element.id)}
+													id={element.id}
+												/></td>
 										</tr>
 										
 									);
