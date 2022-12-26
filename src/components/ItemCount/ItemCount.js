@@ -22,16 +22,16 @@ export const ItemCount = ({status, onAdd, initial= 1}) => {
   }
   return (
     <>
-    <div className='count'>
-      <button onClick={subtract} className='btnC me-3'><img width={26} src='{borrar}' alt='borrar'/ > </button>
+      <div className='count'>
+        <button onClick={subtract} className='btnC me-3'><img width={26} src='{borrar}' alt='borrar'/ > </button>
 
-        <input sonChange={handleChange}  value={quantity}/>
+          <input sonChange={handleChange}  value={quantity}/>
 
-      <button onClick={add} className='btnC ms-3'>
-          <img width={26} src='{agregar}' alt='agregar'/>
-      </button>   
-    </div>
-    <button className='btnB mt-5' onClick={()=> onAdd(quantity)}>Add to Cart</button>
+        <button onClick={add} className='btnC ms-3'>
+            <img width={26} src='{agregar}' alt='agregar'/>
+        </button>   
+      </div>
+      <button className='btnB mt-5' onClick={()=> onAdd(quantity)}>Add to Cart</button>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React,{useState, useContext, useEffect} from 'react';
 import '../ItemDetailContainer/ItemDetailContainer.css';
-import ItemCount from '../ItemCount/ItemCount';
+import {ItemCount} from '../ItemCount/ItemCount';
 import CartContext from '../../context/context';
 import { setLogLevel } from 'firebase/app';
 
@@ -23,7 +23,10 @@ const ItemDetail = ({name, image, id, origin, specie, status, genere, episode}) 
 	};
 		useEffect(() => {
 			setEpisodeData(episodeData);
-		},[episodeData])
+		},[episodeData]);
+
+	
+	const productQuantity = getProductQuantity(id);
 
   return (
     <>
@@ -36,8 +39,9 @@ const ItemDetail = ({name, image, id, origin, specie, status, genere, episode}) 
 						<p className=''>{origin}</p>
 						<p className=''>{genere}</p>
 						<p className='text-5xl mt-2'>{status}</p>
-						
+						<p>	incl. 19% VAT. (the VAT of the respective EU country will be calculated at the checkout.) plus</p>
 					</div>
+					<div>{quantityAdd <= 0 ? (<ItemCount status={status} initial={productQuantity} onAdd={handleOnAdd}/>) : (<div>hola</div>)}</div>
 					<div className="w-full md:w-1/2 p-4 md:p-0">
 						<img src={image} alt="" className="w-100 mx-auto"/>
 					</div>
