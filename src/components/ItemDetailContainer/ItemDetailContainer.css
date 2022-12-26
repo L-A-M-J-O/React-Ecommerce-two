@@ -1,0 +1,15 @@
+.input-count{
+  height: 25px;
+  text-align: center;
+  width: 40px;
+  border-radius: 10%;
+  background-color: aliceblue;
+  color: black;
+}
+.btnB {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  color:  black;
+}

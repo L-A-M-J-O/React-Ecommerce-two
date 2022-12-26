@@ -1,4 +1,7 @@
 import React,{useState} from 'react';
+import añadir from '../../assets/img/añadir.png';
+import resta from '../../assets/img/resta.png'
+import '../ItemDetailContainer/ItemDetailContainer.css';
 
 export const ItemCount = ({status, onAdd, initial= 1}) => {
   const [quantity, setQuantity] =  useState( status>0 ? initial : status);
@@ -21,17 +24,17 @@ export const ItemCount = ({status, onAdd, initial= 1}) => {
       }
   }
   return (
-    <>
-      <div className='count'>
-        <button onClick={subtract} className='btnC me-3'><img width={26} src='{borrar}' alt='borrar'/ > </button>
-
-          <input sonChange={handleChange}  value={quantity}/>
-
+    <div className='row row-cols-1 p-0 m-0'>
+      <div className='col-auto mt-5'>
+        <button onClick={subtract} className='btnC me-3'><img width={22} src={resta} alt='borrar'/ > </button>
+          <input className='input-count'  wsonChange={handleChange}  value={quantity}/>
         <button onClick={add} className='btnC ms-3'>
-            <img width={26} src='{agregar}' alt='agregar'/>
+            <img width={20} src={añadir} alt='agregar'/>
         </button>   
       </div>
-      <button className='btnB mt-5' onClick={()=> onAdd(quantity)}>Add to Cart</button>
-    </>
+      <div className='col-auto'>
+        <button className='btnB mt-5' onClick={()=> onAdd(quantity)}>Add to Cart</button> 
+      </div>
+    </div>
   )
 }
