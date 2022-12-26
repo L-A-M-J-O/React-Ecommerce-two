@@ -10,8 +10,15 @@ export default function CartWidget() {
   return (
     <>
       <button className='btn-cart text-xs text-black'>
-        <Link to='/characters'>Your Characters
-          <span className='text-white'>{quantity}</span>
+        <Link to='/characters'>
+          <div className='row'>
+            <div className='col-auto p-0 m-0 bg-white text-center text-black'>
+              Your Characters: 
+            </div>
+            <div className='col-auto p-0 m-0 bg-white'>
+            <span className='text-center quantity-span text-black bg-white'>{quantity}</span>
+            </div>
+          </div>
         </Link>
       </button>
     </>
