@@ -43,7 +43,7 @@ export const CartChracter = () => {
 											<td>${element.status}</td>
 											<td>{element.quantity}</td>
 											<td>${element.total}</td>
-											<td><img
+											<td><img className='imagen-eliminar'
 													width={25}
 													src={eliminar}
 													alt="borrar"
