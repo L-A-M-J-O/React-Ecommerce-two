@@ -5,7 +5,7 @@ import CartContext from '../../context/context';
 import { setLogLevel } from 'firebase/app';
 import {Link} from 'react-router-dom';
 
-const ItemDetail = ({name, image, id, origin, specie, status, genere, episode}) => {
+const ItemDetail = ({name, image, id, origin, specie, status, genere, episode, price}) => {
 	const [episodeData, setEpisodeData] = useState(episode);
   const [quantityAdd, setQuantityAdd] = useState(0);
 	const { addItem, getProductQuantity } = useContext(CartContext);
@@ -41,6 +41,7 @@ const ItemDetail = ({name, image, id, origin, specie, status, genere, episode}) 
 							<p className=''>{genere}</p>
 							<p className='text-5xl mt-2'>{status}</p>
 							<p>	incl. 19% VAT. (the VAT of the respective EU country will be calculated at the checkout.) plus</p>
+							<h3 className='text-white text-4xl font-semibold m-2'>€{price}</h3>
 							<div>{quantityAdd <= 0 ? (
 							<ItemCount status={status} initial={productQuantity} onAdd={handleOnAdd}/>) : ( <div className='row justify-content-center'><div className='col-5'><Link to='/cartCharacter'><button className='btnB mt-4'>Buy</button></Link></div><div className='col-5'><Link to='/personajes'><button className='btnB mt-4'>Characters</button></Link></div></div>)}</div>
 						</div>

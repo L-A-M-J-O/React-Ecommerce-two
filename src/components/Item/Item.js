@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../../components/Item/Item.css';
 import { Link } from 'react-router-dom';
 
-const Item = ({id, name, image, specie, origin, status}) => {
+const Item = ({id, name, image, specie, origin, status, price}) => {
 
     const [active, setActive] = useState('Alive');
     const [desactive, setDesactive] = useState('Dead');
@@ -32,6 +32,7 @@ const Item = ({id, name, image, specie, origin, status}) => {
                         <div className="widget-49-meeting-info">
                             <span className="widget-49-pro-title bg-white">{specie}</span>
                             <span className="widget-49-meeting-time bg-white">{origin}</span>
+                            <h3 className='text-black bg-white'>€{price}</h3>
                         </div>
                     </div>
                     <ol className="widget-49-meeting-points bg-white">
