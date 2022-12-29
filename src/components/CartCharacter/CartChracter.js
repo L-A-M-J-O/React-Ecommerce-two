@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import CartContext from '../../context/context';
 import '../CartCharacter/CartCharacter.css';
+import eliminar from '../../assets/img/eliminar.png';
 
 export const CartChracter = () => {
 
@@ -43,8 +44,8 @@ export const CartChracter = () => {
 											<td>{element.quantity}</td>
 											<td>${element.total}</td>
 											<td><img
-													width={28}
-													src=''
+													width={25}
+													src={eliminar}
 													alt="borrar"
 													onClick={() => removeItem(element.id)}
 													id={element.id}
