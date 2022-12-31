@@ -41,6 +41,7 @@ export const CartChracter = () => {
 											</td>
 											</td>
 											<td>${element.status}</td>
+											<td>${element.price}</td>
 											<td>{element.quantity}</td>
 											<td>${element.total}</td>
 											<td><img className='imagen-eliminar'
