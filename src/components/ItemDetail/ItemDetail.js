@@ -43,7 +43,7 @@ const ItemDetail = ({name, image, id, origin, specie, status, genere, episode, p
 							<p>	incl. 19% VAT. (the VAT of the respective EU country will be calculated at the checkout.) plus</p>
 							<h3 className='text-white text-4xl font-semibold m-2'>€{price}</h3>
 							<div>{quantityAdd <= 0 ? (
-							<ItemCount status={status} initial={productQuantity} onAdd={handleOnAdd}/>) : ( <div className='row justify-content-center'><div className='col-5'><Link to='/cartCharacter'><button className='btnB mt-4'>Buy</button></Link></div><div className='col-5'><Link to='/personajes'><button className='btnB mt-4'>Characters</button></Link></div></div>)}</div>
+							<ItemCount status={status} initial={productQuantity} onAdd={handleOnAdd}/>) : ( <div className='row justify-content-center'><div className='col-5'><Link to='/cartCharacter'><button className='button-6 mt-4'>Buy</button></Link></div><div className='col-5'><Link to='/personajes'><button className='button-6 mt-4'>Characters</button></Link></div></div>)}</div>
 						</div>
 						<div className="w-full md:w-1/2 p-4 md:p-0">
 							<img src={image} alt="" className="w-100 mx-auto"/>

@@ -39,7 +39,7 @@ const Item = ({id, name, image, specie, origin, status, price}) => {
                         <li className="widget-49-meeting-item bg-white"><span className='span-status bg-white text-black capitalize'>{status}</span></li>
                     </ol>
                     <div className="widget-49-meeting-action bg-white">
-                        <Link to={`/detail/${id}`} className="btn btn-sm btn-flash-border-primary border">Get in</Link>
+                        <Link to={`/detail/${id}`} className="button-6 btn-sm btn-flash-border-primary border">Get in</Link>
                     </div>
                 </div>
             </div>
@@ -49,4 +49,5 @@ const Item = ({id, name, image, specie, origin, status, price}) => {
 }
 
 export default Item
+
 

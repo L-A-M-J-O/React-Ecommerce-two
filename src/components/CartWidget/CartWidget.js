@@ -6,7 +6,7 @@ import CartContext from '../../context/context';
 
 export default function CartWidget() {
   const {getQuantity} = useContext(CartContext);
-  const quantity = getQuantity()
+  const quantity =  getQuantity()
   return (
     <>
       <button className='btn-cart text-xs text-black'>

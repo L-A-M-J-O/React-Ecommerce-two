@@ -16,7 +16,7 @@ export const CartChracter = () => {
 					<div className="row justify-content-center mt-3">
 						<div className="col-12 col-sm-12 col-md-5 col-lg-5 text-center">
 							<Link to="/personajes" className="m-txt-a" aria-current="page">
-								<button className="btnB mt-4">Characters</button>
+								<button className="button-6">Characters</button>
 							</Link>
 						</div>
 					</div>
@@ -57,21 +57,25 @@ export const CartChracter = () => {
 								})}
 				</tbody>
 				{cart.length !== 0 && (
-							<div className="row justify-content-center">
-								<div className="col-2">
-									<button className="btnI" onClick={clearCart}>
-										Clean cart
-									</button>
-								</div>
-								<div className="col-2">
-									<Link className="m-a-c" to="/cervezas">
-										Keep buying
-									</Link>
-								</div>
-								<div className="col-2">
-									<Link to="/form">
-										<button className="btnI">To buy</button>
-									</Link>
+							<div className='row justify-content-center'>
+								<div className='col-4'>
+										<div className="row justify-content-center">
+										<div className="col-auto">
+											<button className="button-6" onClick={clearCart}>
+												Clean cart
+											</button>
+										</div>
+										<div className="col-auto">
+											<Link className="button-6" to="/personajes">
+												Keep buying
+											</Link>
+										</div>
+										<div className="col-auto">
+											<Link to="/comprando">
+												<button className="button-6">To buy</button>
+											</Link>
+										</div>
+									</div>
 								</div>
 							</div>
 						)}

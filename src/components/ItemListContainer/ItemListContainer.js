@@ -43,9 +43,6 @@ export const ItemListContainer = ({tittle}) => {
           <div className='col-4'>
             <h1 className='loading'>Loading...</h1>
           </div>
-          <div className='col-12'>
-              <Curiosidad/>
-            </div>
         </div>
       </section> 
       )

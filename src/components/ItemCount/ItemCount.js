@@ -33,7 +33,7 @@ export const ItemCount = ({status, onAdd, initial= 1}) => {
         </button>   
       </div>
       <div className='col-auto'>
-        <button className='btnB mt-5' onClick={()=> onAdd(quantity)}>Add to Cart</button> 
+        <button className='button-6 mt-5' onClick={()=> onAdd(quantity)}>Add to Cart</button> 
       </div>
     </div>
   )
